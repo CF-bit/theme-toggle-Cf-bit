@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Accessibility Feature - Theme Toggle</title>
     <style>
         body {
@@ -26,14 +26,26 @@
             cursor: pointer;
         }
 
+        /* Hide the icon background image temporarily */
         .icon {
-            width: 36px;
-            height: 36px;
-            display: inline-block;
-            background-image: url('accessible-icon.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            display: none;
+        }
+
+        /* New visible toggle button styling */
+        #toggle-button {
+            background-color: #ddd;
+            border: none;
+            padding: 8px 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s;
+        }
+
+        #toggle-button:hover {
+            background-color: #bbb;
         }
 
         .content {
@@ -54,16 +66,17 @@
 </head>
 
 <body>
-
     <div id="theme-toggle-container">
         <span class="icon" aria-label="Accessibility Icon"></span>
+        <!-- Visible toggle button -->
+        <button id="toggle-button" aria-label="Toggle light and dark mode">Toggle Theme</button>
     </div>
 
     <main class="content">
         <h1>Welcome to the Accessibility Feature Demo</h1>
         <p>
             This page demonstrates a simple light/dark theme toggle feature implemented using JavaScript.
-            Click the icon in the upper-right corner to switch between themes. Your preference will be saved for future visits.
+            Click the button in the upper-right corner to switch between themes. Your preference will be saved for future visits.
         </p>
     </main>
 

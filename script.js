@@ -1,10 +1,10 @@
-const toggleContainer = document.getElementById('theme-toggle-container');
+const toggleButton = document.getElementById('toggle-button');
 
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
 }
 
-toggleContainer.addEventListener('click', () => {
+toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 
     if (document.body.classList.contains('dark')) {
