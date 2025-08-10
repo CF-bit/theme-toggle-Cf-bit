@@ -1,77 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Accessibility Feature - Theme Toggle</title>
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: #ffffff;
-                color: #000000;
-                transition: background-color 0.3s, color 0.3s;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Feature - Theme Toggle</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-            body.dark {
-                background-color: #000000;
-                color: #ffffff;
-            }
+        body.dark {
+            background-color: #000000;
+            color: #ffffff;
+        }
 
-            #theme-toggle-container {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                cursor: pointer;
-            }
+        #theme-toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
 
-            .icon {
-                width: 36px;
-                height: 36px;
-                display: inline-block;
-                background-image: url('accessible-icon.png');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
+        .icon {
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            background-image: url('accessible-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-            .content {
-                padding: 20px;
-                text-align: center;
-            }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
 
-            h1 {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-            p {
-                font-size: 1.25rem;
-                line-height: 1.5;
-            }
-        </style>
-    </head>
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
 
-    <body>
+<body>
 
-        <div id="theme-toggle-container">
-            <span class="icon" aria-label="Accessibility Icon"></span>
-        </div>
+    <div id="theme-toggle-container">
+        <span class="icon" aria-label="Accessibility Icon"></span>
+    </div>
 
-        <main class="content">
-            <h1>Welcome to the Accessibility Feature Demo</h1>
-            <p>
-                This page demonstrates a simple light/dark theme toggle feature implemented using JavaScript.
-                Click the icon in the upper-right corner to switch between themes. Your preference will be saved for future visits.
-            </p>
-        </main>
+    <main class="content">
+        <h1>Welcome to the Accessibility Feature Demo</h1>
+        <p>
+            This page demonstrates a simple light/dark theme toggle feature implemented using JavaScript.
+            Click the icon in the upper-right corner to switch between themes. Your preference will be saved for future visits.
+        </p>
+    </main>
 
-        <script>
-            // TODO: Add JavaScript here to handle theme toggling.
-            // Hint: Use document.getElementById() to select the button.
-            // Check the article for step-by-step guidance!
-        </script>
-    </body>
+    <script src="script.js"></script>
+</body>
 
 </html>
