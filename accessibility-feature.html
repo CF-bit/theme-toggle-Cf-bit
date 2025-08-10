@@ -26,26 +26,27 @@
             cursor: pointer;
         }
 
-        /* Hide the icon background image temporarily */
         .icon {
-            display: none;
-        }
-
-        /* New visible toggle button styling */
-        #toggle-button {
-            background-color: #ddd;
-            border: none;
-            padding: 8px 12px;
-            font-size: 1rem;
-            border-radius: 6px;
-            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            background-image: url('accessible-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             user-select: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-            transition: background-color 0.3s;
+            transition: filter 0.3s;
         }
 
-        #toggle-button:hover {
-            background-color: #bbb;
+        /* Invert icon colors in dark mode for visibility */
+        body.dark .icon {
+            filter: invert(1);
+        }
+
+        /* Focus style for accessibility */
+        .icon:focus {
+            outline: 2px solid #005fcc;
+            outline-offset: 2px;
         }
 
         .content {
@@ -67,16 +68,14 @@
 
 <body>
     <div id="theme-toggle-container">
-        <span class="icon" aria-label="Accessibility Icon"></span>
-        <!-- Visible toggle button -->
-        <button id="toggle-button" aria-label="Toggle light and dark mode">Toggle Theme</button>
+        <span class="icon" id="toggle-button" role="button" tabindex="0" aria-label="Toggle light and dark mode"></span>
     </div>
 
     <main class="content">
         <h1>Welcome to the Accessibility Feature Demo</h1>
         <p>
             This page demonstrates a simple light/dark theme toggle feature implemented using JavaScript.
-            Click the button in the upper-right corner to switch between themes. Your preference will be saved for future visits.
+            Click the icon in the upper-right corner to switch between themes. Your preference will be saved for future visits.
         </p>
     </main>
 

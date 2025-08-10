@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark');
     }
 
-    // Add click listener only if the button exists
     if (toggleButton) {
+        // Toggle on click
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark');
 
@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('theme', 'dark');
             } else {
                 localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Also allow toggling via keyboard (Enter or Space)
+        toggleButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleButton.click();
             }
         });
     }
