@@ -13,4 +13,4 @@ This repository contains the starter files for the **Accessibility Feature Assig
 - Push your changes to your GitHub repo.
 - Publish changes to GitHub Pages using the feature branch as the source for live testing.
 - Submit a pull request to propose changes for review.
-https://cf-bit.github.io/theme-toggle-Cf-bit/
+[https://cf-bit.github.io/theme-toggle-Cf-bit/](https://cf-bit.github.io/theme-toggle-Cf-bit/accessibility-feature.html)
